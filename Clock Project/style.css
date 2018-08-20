@@ -4,17 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #01a79d;
-  flex-direction: column;
-
-}
-
-#logo-image{
-  max-width: 250px;
 }
 
 #timer{
   font-size: 5rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: white;
 }
