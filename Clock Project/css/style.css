@@ -1,0 +1,47 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01a79d;
+  flex-direction: column;
+}
+
+#logo-image{
+  max-width: 250px;
+}
+
+#timer{
+  font-size: 3rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #01a79d;
+  padding:1rem;
+}
+
+.logo-circle{
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+}
+
+.logo-mi{
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+}
+
+.logo-dot{
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+}
+
+.letter-styling{
+  background-color:white;
+  padding:1.25rem;
+  border:1px solid #01a79d;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+}
