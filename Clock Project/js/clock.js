@@ -1,11 +1,10 @@
 /*
  This is a modified version of the w3 school countdown example.
-
  ORIGINAL VERSION OF W3 SCHOOL COUNTDOWN EXAMPLE -  https://www.w3schools.com/howto/howto_js_countdown.asp
 */
 
 
-const END_DATE = "January 1, 2019 00:00:00"; //
+const END_DATE = "January 31, 2019 00:00:00"; // Date That I'm Aiming For
 const END_OF_DATE_MESSAGE = "UH OH, I'm late"; // Sets A Message When The Date Expires
 const REFRESH_RATE_MS = 1000; // Sets The Refresh Rate In Milliseconds
 
@@ -21,7 +20,6 @@ let countdownEndDate = new Date(END_DATE).getTime();
 let refreshCountdownTimer = setInterval(function() {
   document.getElementById("timer").textContent = "";
 
-
   // Gets The Current Time
   let currentTime = new Date().getTime();
 
@@ -32,7 +30,7 @@ let refreshCountdownTimer = setInterval(function() {
   let days = Math.floor(timeDifference / (MILLISECONDS_IN_SECONDS *  SECONDS_IN_MINUTES * MINUTES_IN_HOURS * HOURS_IN_DAY));
   let hours = Math.floor((timeDifference % (MILLISECONDS_IN_SECONDS * SECONDS_IN_MINUTES * MINUTES_IN_HOURS * HOURS_IN_DAY)) / (MILLISECONDS_IN_SECONDS * SECONDS_IN_MINUTES * MINUTES_IN_HOURS));
   let minutes = Math.floor((timeDifference % (MILLISECONDS_IN_SECONDS * SECONDS_IN_MINUTES * MINUTES_IN_HOURS )) / (MILLISECONDS_IN_SECONDS * SECONDS_IN_MINUTES));
-  let seconds = Math.floor((timeDifference % (MILLISECONDS_IN_SECONDS * 60)) / MILLISECONDS_IN_SECONDS);
+  let seconds = Math.floor((timeDifference % (MILLISECONDS_IN_SECONDS * SECONDS_IN_MINUTES)) / MILLISECONDS_IN_SECONDS);
 
   // Display the result in the element with id="timer"
   let timer = days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
@@ -48,13 +46,12 @@ let refreshCountdownTimer = setInterval(function() {
     else{
       newSpan.setAttribute('class', 'other-styling');
       document.getElementById('timer').appendChild(newSpan);
-
     }
   }
 
   // When the countdown ends, write some text
   if (timeDifference < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = END_OF_DATE_MESSAGE;
+    clearInterval(REFRESH_RATE_MS);
+    document.getElementById("message").textContent = END_OF_DATE_MESSAGE;
   }
 }, REFRESH_RATE_MS);
